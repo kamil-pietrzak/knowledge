@@ -3,7 +3,7 @@
 import datetime
 
 now = datetime.datetime.now()
-
+print(now)
 
 with open('/var/opt/MicroStrategy/Command_Manager_Scripts/all_cubes.log') as file_object:
     with open('/var/opt/MicroStrategy/Command_Manager_Scripts/cubes.txt', 'w') as target_object:
