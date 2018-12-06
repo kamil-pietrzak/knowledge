@@ -1,0 +1,25 @@
+# 1) Check version:
+docker version
+
+# 2) First program:
+docker run hello-world
+# What's happening: 'docker run' creates a new container and it's looking for an imgage 'hello-world'.
+# First it looks for a local image in 'image cache'.
+# If the 'image cache' is empty it goes to 'docker hub' which is a public repository of images.
+# Since you are running the program for the first time it downloads the 'hello-world' image
+# form ' docker hub' and stores it locally in the 'image cache'.
+
+# 3) Default command override:
+docker run <image name> command!
+# Basically, image files contian information about "File System" (file system snapshot) and startup command.
+# Command overrride replaces the startup command.
+# Example: docker run busybox echo Test
+
+# 4) List running containers and its information:
+docker ps
+
+# 5) List history of all containers that was running:
+docker ps --all
+
+# 6) What happens when 'docker run <image name>' is executed
+docker run = docker create (*creates file system*) + docker start (*runs sturtup command*) 
